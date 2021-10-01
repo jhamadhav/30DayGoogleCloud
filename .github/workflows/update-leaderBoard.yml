@@ -20,7 +20,6 @@ jobs:
         with:
           node-version: 12.x
       - run: |
-          npm install
           npm run 3.Get Data
           npm run 4.Make leaderBoard
       - name: Commit and push changes

@@ -4,7 +4,7 @@
   "description": "Generate leaderboard and report mails for participants and facilitators.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "Refine rawData": "node ./refineData/filterParticipantsData.js"
   },
   "repository": {
     "type": "git",

@@ -21,7 +21,7 @@ data = data.map((elem) => {
         "profileLink": elem["Qwiklabs Profile URL"],
         // "email": elem["gcrstudentEmail"],
         "enrollDate": Date.UTC(year, month, day),
-        "enrollStatus": elem["Enrolment Status"] == "All Good" ? true : false
+        "isEnrollStatusGood": elem["Enrolment Status"] == "All Good" ? true : false
     }
 })
 

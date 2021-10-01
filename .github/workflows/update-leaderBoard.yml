@@ -20,8 +20,9 @@ jobs:
         with:
           node-version: 12.x
       - run: |
+          npm install
           npm run 3.GetData
-          npm run 4.MakeleaderBoard
+          npm run 4.MakeLeaderBoard
       - name: Commit and push changes
         run: |
           git config --global user.name "jhamadhav"

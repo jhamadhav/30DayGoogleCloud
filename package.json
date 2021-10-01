@@ -7,7 +7,7 @@
     "1.RefineData": "node ./refineData/filterParticipantsData.js",
     "2.GenerateNicknames": "node ./nicknameGenerator/generateNicknames.js",
     "3.GetData": "node ./scrapeData/getParticipantsData.js",
-    "4.MakeleaderBoard": "node ./makeLeaderBoard/generateLeaderBoard.js"
+    "4.MakeLeaderBoard": "node ./makeLeaderBoard/generateLeaderBoard.js"
   },
   "repository": {
     "type": "git",

@@ -19,7 +19,9 @@ data = data.map((elem) => {
     return {
         "name": elem["Student Name"],
         "profileLink": elem["Qwiklabs Profile URL"],
-        "email": elem["Student Email"] || null,
+
+        // no email due to privacy reasons
+        // "email": elem["Student Email"] || null,
         "enrollDate": Date.UTC(year, month, day),
         "isEnrollStatusGood": (elem["Enrolment Status"] == "All Good") ? true : false
     }

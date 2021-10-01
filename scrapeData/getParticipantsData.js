@@ -64,7 +64,6 @@ const init = async () => {
         let badges = await scrapper.getBadges(profile[i]["profileLink"], profile[i]["enrollDate"])
         profile[i]["badges"] = badges
     }
-    console.log(profile);
 
     // count skills and quests
     let track1 = trackData.trackData[0];
@@ -103,7 +102,6 @@ const init = async () => {
     }
     // console.log(db);
     dbFunc.write(dbFileLoc, db)
-    // dbFunc.write("leaderboard.js", profile)
     console.log("\n---Data collection done---\n");
 }
 

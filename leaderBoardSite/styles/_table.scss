@@ -46,6 +46,10 @@ table {
         }
     }
 
+    td {
+        text-transform: capitalize;
+    }
+
     .cell {
         text-align: center;
     }
@@ -62,14 +66,6 @@ table {
 
 .red {
     color: $gRed;
-}
-
-.yellow {
-    color: $gYellow;
-}
-
-.blue {
-    color: $gBlue;
 }
 
 .green {

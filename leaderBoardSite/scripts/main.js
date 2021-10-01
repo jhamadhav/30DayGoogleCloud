@@ -8,7 +8,7 @@ const addToLeaderBoard = (i, obj) => {
     <tr class="row">
             <td class="cell">${i}</td>
             <td class="cell ${obj.color}">
-                ${obj.nickname}
+                ${obj.name.toLowerCase()}
             </td>
             <td class="cell">${obj.skills}</td>
     </tr>
@@ -20,9 +20,13 @@ const addToLeaderBoard = (i, obj) => {
 const init = async () => {
     let time = updateTime
 
-
+    let j = 0;
     for (let i = 0; i < leaderBoardData.length; i++) {
-        addToLeaderBoard(i + 1, leaderBoardData[i])
+        if (leaderBoardData[i]["skills"] <= 0) {
+            continue;
+        }
+        addToLeaderBoard(j + 1, leaderBoardData[i])
+        j++;
     }
     time = time.split(" ")
     time = time[0]

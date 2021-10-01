@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/jhamadhav/30DayGoogleCloud/issues"
   },
-  "homepage": "https://github.com/jhamadhav/30DayGoogleCloud#readme"
+  "homepage": "https://github.com/jhamadhav/30DayGoogleCloud#readme",
+  "dependencies": {
+    "node-fetch": "^3.0.0",
+    "node-html-parser": "^4.1.5"
+  }
 }

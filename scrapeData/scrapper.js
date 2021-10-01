@@ -58,7 +58,7 @@ const getBadges = async (url, enrollDate) => {
         let len = links[i].length
         let badge = {
             "badgeName": badgeName[i],
-            "badgeID": links[i].substring(len - 6, len - 1),
+            "badgeID": links[i].substring(len - 7, len),
             "badgeDate": badgeDate[i]
         }
         // console.log(badge);

@@ -63,27 +63,31 @@ const init = async () => {
     console.log(profile);
 
     // count skills and quests
-    // trackData.allQuests = trackData.allQuests.map(elem => elem.name)
-    // trackData.allSkills = trackData.allSkills.map(elem => elem.name)
-    // trackData.allQuests = trackData.allQuests.map(elem => joinStr(elem))
-    // trackData.allSkills = trackData.allSkills.map(elem => joinStr(elem))
-    // for (let i = 0; i < profile.length; i++) {
-    //     let badges = profile[i]["badges"].map(elem => elem.badgeName)
+    let track1 = trackData.trackData[0];
+    track1.skills = track1.skills.map(elem => elem.name).map(elem => joinStr(elem))
 
-    //     let quests = 0;
-    //     let skills = 0
-    //     badges.forEach(elem => {
-    //         elem = joinStr(elem)
-    //         if (trackData.allQuests.indexOf(elem) != -1) {
-    //             quests++;
-    //         }
-    //         if (trackData.allSkills.indexOf(elem) != -1) {
-    //             skills++;
-    //         }
-    //     });
-    //     profile[i]["quests"] = quests
-    //     profile[i]["skills"] = skills
-    // }
+    let track2 = trackData.trackData[1];
+    track2.skills = track2.skills.map(elem => elem.name).map(elem => joinStr(elem))
+
+    for (let i = 0; i < profile.length; i++) {
+        let badges = profile[i]["badges"].map(elem => elem.badgeName)
+
+        let skills = 0, trackOne = 0, trackTwo = 0
+        badges.forEach(elem => {
+            elem = joinStr(elem)
+            if (track1.skills.indexOf(elem) != -1) {
+                trackOne++;
+                skills++;
+            }
+            if (track2.skills.indexOf(elem) != -1) {
+                trackTwo++;
+                skills++;
+            }
+        });
+        profile[i]["skills"] = skills
+        profile[i]["trackOne"] = trackOne
+        profile[i]["trackTwo"] = trackTwo
+    }
 
     console.log("\nUpdating db.json\n");
     let db = {

@@ -2,4 +2,7 @@ node_modules
 package-lock.json
 
 rawParticipantsData.json
+
+# to be removed later
 participants.json
+db.json

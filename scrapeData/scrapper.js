@@ -1,4 +1,4 @@
-const fetch = require("node-fetch")
+const fetch = require("cross-fetch")
 const parser = require("node-html-parser")
 
 const makeRequest = async (url) => {

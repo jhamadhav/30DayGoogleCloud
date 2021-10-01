@@ -90,8 +90,8 @@ const init = async () => {
         "participants": profile,
         "time": getCurrentTime()
     }
-    // console.log(db);
-    // dbFunc.write(dbFileLoc, db)
+    console.log(db);
+    dbFunc.write(dbFileLoc, db)
     console.log("\n---Data collection done---\n");
 }
 

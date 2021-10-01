@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/jhamadhav/30DayGoogleCloud#readme",
   "dependencies": {
-    "node-fetch": "^3.0.0",
+    "cross-fetch": "^3.1.4",
     "node-html-parser": "^4.1.5"
-  }
+  },
+  "type": "commonjs"
 }

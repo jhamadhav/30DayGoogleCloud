@@ -53,9 +53,13 @@ const init = async () => {
         "isEnrollStatusGood": true,
         "nickname": "Bouncy Vampire"
     }]
+    profile = participants["profiles"]
 
     for (let i = 0; i < profile.length; i++) {
-        await delay(400)
+        // await delay(400)
+        if (profile[i]["isEnrollStatusGood"] == false) {
+            continue;
+        }
         console.log(`Fetching Person ${i + 1}`)
         let badges = await scrapper.getBadges(profile[i]["profileLink"], profile[i]["enrollDate"])
         profile[i]["badges"] = badges
@@ -70,6 +74,9 @@ const init = async () => {
     track2.skills = track2.skills.map(elem => elem.name).map(elem => joinStr(elem))
 
     for (let i = 0; i < profile.length; i++) {
+        if (profile[i]["isEnrollStatusGood"] == false) {
+            continue;
+        }
         let badges = profile[i]["badges"].map(elem => elem.badgeName)
 
         let skills = 0, trackOne = 0, trackTwo = 0
@@ -94,8 +101,9 @@ const init = async () => {
         "participants": profile,
         "time": getCurrentTime()
     }
-    console.log(db);
+    // console.log(db);
     dbFunc.write(dbFileLoc, db)
+    // dbFunc.write("leaderboard.js", profile)
     console.log("\n---Data collection done---\n");
 }
 

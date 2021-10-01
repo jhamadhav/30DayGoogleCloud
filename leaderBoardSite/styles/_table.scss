@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// variables
+$trBG : #fff;
+$text : #262626;
+$gRed:#e94234;
+$gBlue:#4285f4;
+$gYellow:#fbbc05;
+$gGreen:#34a853;
+$mobile : 770px;
+
+@mixin mobile {
+    @media (max-width : #{$mobile}) {
+        @content;
+    }
+}
+
+body {
+    width: 100vw;
+}
+
+table {
+    width: 92%;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 40px;
+    color: $text;
+    border-collapse: collapse;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 50px;
+    text-transform: capitalize;
+
+
+    tr {
+        background: $trBG;
+        height: 56px;
+        border-top: 6px solid #efefef;
+        border-bottom: 2px solid #efefef;
+
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+
+    .cell {
+        text-align: center;
+    }
+
+    th {
+        font-weight: bold;
+    }
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+.red {
+    color: $gRed;
+}
+
+.yellow {
+    color: $gYellow;
+}
+
+.blue {
+    color: $gBlue;
+}
+
+.green {
+    color: $gGreen;
+}
+
+.black {
+    color: $text;
+}

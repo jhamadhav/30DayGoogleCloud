@@ -1,0 +1,102 @@
+// variables
+$footerBG : rgba(23, 30, 41, 0.8);
+$hoverColor : #4285f4;
+$mobile : 770px;
+
+@mixin mobile {
+    @media (max-width : #{$mobile}) {
+        @content;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#footer {
+    position: relative;
+    background-color: $footerBG;
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .site-name {
+        font-family: 'Raleway', sans-serif;
+        font-size: xx-large;
+
+        @include mobile {
+            font-size: x-large;
+        }
+    }
+
+    .detail {
+        font-size: medium;
+        margin-top: 10px;
+        width: 80%;
+        max-width: 800px;
+        text-align: center;
+
+        @include mobile {
+            font-size: small;
+        }
+    }
+}
+
+.credit {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: $gYellow;
+    }
+}
+
+.extra {
+    width: 100vw;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 4px;
+
+    .copyright {
+        font-size: small;
+
+        @include mobile {
+            font-size: x-small;
+        }
+    }
+
+    .social {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+
+    svg {
+        margin: 0 10px;
+
+        @include mobile {
+            width: 30px;
+        }
+
+        &:hover {
+            fill: $hoverColor;
+        }
+    }
+}

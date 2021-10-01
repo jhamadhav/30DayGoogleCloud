@@ -1,0 +1,90 @@
+/* fonts
+font-family: 'Montserrat', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
+
+@import "./navbar", "./table", "./footer";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$mobile : 770px;
+
+@mixin mobile {
+    @media (max-width : #{$mobile}) {
+        @content;
+    }
+}
+
+body {
+    background-color: #efefef;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+    padding-top: 100px;
+}
+
+.info {
+    width: 90%;
+    max-width: 750px;
+    border-radius: 10px;
+    background: #D1ECF1;
+    color: #2A6B76;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    left: 0;
+    right: 0;
+    padding: 20px 26px;
+
+    span {
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: large;
+        margin-bottom: 10px;
+        text-align: center;
+
+        @include mobile {
+            font-size: medium;
+        }
+    }
+
+}
+
+
+.colorScheme {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0;
+
+    .milestones {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        .milestone {
+            margin-left: 16px;
+            margin-top: 10px;
+            padding: 5px 18px;
+            border-radius: 8px;
+            background: #fff;
+        }
+    }
+}

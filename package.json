@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "1.Refine rawData": "node ./refineData/filterParticipantsData.js",
-    "2.Generate nicknames": "node ./nicknameGenerator/generateNicknames.js"
+    "2.Generate nicknames": "node ./nicknameGenerator/generateNicknames.js",
+    "3.Get Data": "node ./scrapeData/getParticipantsData.js",
+    "4.Make leaderBoard": "node ./makeLeaderBoard/generateLeaderBoard.js"
   },
   "repository": {
     "type": "git",

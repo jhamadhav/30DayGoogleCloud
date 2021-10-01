@@ -7,6 +7,12 @@ const makeRequest = async (url) => {
 }
 
 const getBadges = async (url, enrollDate) => {
+
+    let res = new RegExp("^(https://|http://){1}");
+    if (!res.test(url)) {
+        url = "https://" + url;
+    }
+
     let data = []
     let htmlData = await makeRequest(url)
     htmlData = parser.parse(htmlData)

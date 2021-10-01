@@ -1,0 +1,179 @@
+// variables
+$navbarBG:#fff;
+$navbarHeight:70px;
+$navbarText : #000;
+$hoverColor : #4285f4;
+$tabColor:#34a853;
+$shadow : 0 1px 3px rgba(0, 0, 0, 0.12),
+0 1px 2px rgba(0, 0, 0, 0.24);
+$mobile : 770px;
+
+@mixin mobile {
+    @media (max-width : #{$mobile}) {
+        @content;
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100%;
+    height: $navbarHeight;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $navbarBG;
+    color: $navbarText;
+    font-family: 'Raleway', sans-serif;
+    z-index: 100;
+    box-shadow: $shadow;
+
+    @include mobile {
+        justify-content: flex-start;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        text-transform: capitalize;
+
+        a {
+            text-decoration: none;
+            color: $navbarText;
+            cursor: pointer;
+        }
+
+        svg {
+            width: 40px;
+            margin: 0px 20px;
+
+            @include mobile {
+                margin: 0 10px;
+            }
+        }
+
+        .site-name {
+            font-size: x-large;
+            letter-spacing: 2px;
+
+            @include mobile {
+                font-size: large;
+            }
+        }
+    }
+}
+
+.nav-links {
+    width: 50%;
+    height: 100%;
+    max-width: 500px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @include mobile {
+        width: 100vw;
+        max-width: 400px;
+        flex-direction: column;
+        position: absolute;
+        background-color: $navbarBG;
+        height: calc(100vh - 70px);
+        top: $navbarHeight;
+        transition: 300ms;
+        transform: translateX(-100%);
+        border-top: 3px solid $navbarText;
+        justify-content: flex-end;
+    }
+
+    a {
+        font-size: medium;
+        text-decoration: none;
+        height: 100%;
+    }
+
+    li {
+        height: 100%;
+        color: $navbarText;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        text-transform: uppercase;
+        border: 4px solid transparent;
+        letter-spacing: 2px;
+
+        @include mobile {
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        &:hover {
+            border-bottom: 4px solid $hoverColor;
+        }
+    }
+
+    .selected {
+        border: 4px solid transparent;
+        border-bottom: 4px solid $tabColor;
+    }
+}
+
+
+.burger {
+    background-color: transparent;
+    display: none;
+    height: 40px;
+    width: 44px;
+    cursor: pointer;
+    transition-duration: 300ms;
+
+    @include mobile {
+        display: block;
+    }
+
+    span {
+        position: relative;
+        display: block;
+        height: 4px;
+        width: 36px;
+        margin: 6px;
+        background-color: $navbarText;
+        transition-duration: 300ms;
+    }
+}
+
+/*  added class for animation purpose  */
+.open {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.menuAnimate span:nth-child(1) {
+    transform-origin: 18px;
+    transform: translateY(10px) rotate(-45deg);
+}
+
+.menuAnimate span:nth-child(2) {
+    transform-origin: 18px;
+    transform: rotate(45deg);
+}
+
+.menuAnimate span:nth-child(3) {
+    opacity: 0;
+    transform: translateY(15px);
+}

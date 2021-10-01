@@ -1,0 +1,19 @@
+{
+  "name": "30daygooglecloud",
+  "version": "1.0.0",
+  "description": "Generate leaderboard and report mails for participants and facilitators.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhamadhav/30DayGoogleCloud.git"
+  },
+  "author": "Madhav Jha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhamadhav/30DayGoogleCloud/issues"
+  },
+  "homepage": "https://github.com/jhamadhav/30DayGoogleCloud#readme"
+}

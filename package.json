@@ -7,7 +7,8 @@
     "1.RefineData": "node ./refineData/filterParticipantsData.js",
     "2.GenerateNicknames": "node ./nicknameGenerator/generateNicknames.js",
     "3.GetData": "node ./scrapeData/getParticipantsData.js",
-    "4.MakeLeaderBoard": "node ./makeLeaderBoard/generateLeaderBoard.js"
+    "4.MakeLeaderBoard": "node ./makeLeaderBoard/generateLeaderBoard.js",
+    "sendMailReport": "node ./progressMailReport/sendMails.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,8 @@
   "homepage": "https://github.com/jhamadhav/30DayGoogleCloud#readme",
   "dependencies": {
     "cross-fetch": "^3.1.4",
-    "node-html-parser": "^4.1.5"
+    "node-html-parser": "^4.1.5",
+    "nodemailer": "^6.6.5"
   },
   "type": "commonjs"
 }

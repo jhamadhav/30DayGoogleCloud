@@ -1,7 +1,7 @@
 # #30DayGoogleCloud
 
 <p align="center">
-        <a href="https://events.withgoogle.com/30daysofgooglecloud/#content" target="_blank"><img src="https://lh3.googleusercontent.com/7yRXKRJI23KYXeVSz23kP4d7y_PofKM4ACaSKnDLzxL4zRTO9iQ05kAH7LKHP1hqgDiaC_kMzw4JhIUwJqVBtg=w0" alt=""></a>
+        <a href="https://events.withgoogle.com/30daysofgooglecloud/#content" target="_blank"><img src="https://user-images.githubusercontent.com/37475140/135711341-d3327a78-968e-4a52-916e-a2a9bed85b10.png" alt=""></a>
 </p>
 
 ## what is #30DayGoogleCloud ?
@@ -31,7 +31,7 @@ To all the facilitator google provides a sheet with participants data, since it 
 1. Convert the `excel sheet` to `json`, you can use [online tools](https://csvjson.com/)
 2. Once you have it ready, create a file in folder : `refineData/rawParticipantsData.json`
 It should look something like this
-```json
+```text
 [
     ...
     {

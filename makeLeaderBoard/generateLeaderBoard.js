@@ -16,10 +16,10 @@ const init = () => {
 
         let color = "black";
         if (profile[i]["trackOne"] == 6 || profile[i]["trackTwo"] == 6) {
-            color = "green"
+            color = "blue"
         }
         if (profile[i]["trackOne"] == 6 && profile[i]["trackTwo"] == 6) {
-            color = "red"
+            color = "green"
         }
         let data = {
             name: profile[i]["name"],

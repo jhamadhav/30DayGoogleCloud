@@ -8,7 +8,7 @@ inpBar.oninput = () => {
     inp = inp.trim()
     inp = inp.toLowerCase()
 
-    if (inp.length > 1) {
+    if (inp.length > 0) {
 
         for (let i = 0; i < leaderBoardData.length; i++) {
             let obj = leaderBoardData[i].name.toLowerCase()

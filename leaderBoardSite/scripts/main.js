@@ -10,7 +10,8 @@ const addToLeaderBoard = (i, obj) => {
             <td class="cell ${obj.color}">
                 ${obj.name.toLowerCase()}
             </td>
-            <td class="cell">${obj.skills}</td>
+            <th class="cell robo">${obj.trackOne}</th>
+            <th class="cell robo">${obj.trackTwo}</th>
     </tr>
         `
     board.innerHTML += newRow
@@ -22,9 +23,7 @@ const init = async () => {
 
     let j = 0;
     for (let i = 0; i < leaderBoardData.length; i++) {
-        if (leaderBoardData[i]["skills"] <= 0) {
-            continue;
-        }
+
         addToLeaderBoard(j + 1, leaderBoardData[i])
         j++;
     }

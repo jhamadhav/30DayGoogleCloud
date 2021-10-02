@@ -65,7 +65,7 @@ nav {
 
         .site-name {
             font-size: x-large;
-            letter-spacing: 2px;
+            font-family: 'Roboto Mono', sans-serif;
 
             @include mobile {
                 font-size: large;

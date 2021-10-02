@@ -64,8 +64,12 @@ table {
     }
 }
 
-.red {
-    color: $gRed;
+.yellow {
+    color: $gYellow;
+}
+
+.blue {
+    color: $gBlue;
 }
 
 .green {
@@ -74,4 +78,8 @@ table {
 
 .black {
     color: $text;
+}
+
+.robo {
+    font-weight: lighter;
 }

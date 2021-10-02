@@ -35,12 +35,14 @@ const init = () => {
 
     leaderBoard.sort((a, b) => {
         if (a["skills"] == b["skills"]) {
-            if (a["latestSkill"] > b["latestSkill"]) {
-                return -1
+            console.log("hi");
+            if (a["latestSkill"] == b["latestSkill"]) {
+                return 0
             } else if (a["latestSkill"] < b["latestSkill"]) {
+                return -1
+            } else {
                 return 1
             }
-            return 0
 
         } else if (a["skills"] > b["skills"]) {
             return -1

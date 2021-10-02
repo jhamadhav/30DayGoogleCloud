@@ -8,7 +8,7 @@
     "2.GenerateNicknames": "node ./nicknameGenerator/generateNicknames.js",
     "3.GetData": "node ./scrapeData/getParticipantsData.js",
     "4.MakeLeaderBoard": "node ./makeLeaderBoard/generateLeaderBoard.js",
-    "sendMailReport": "node ./progressMailReport/sendMails.js"
+    "sendMailReport": "node ./scrapeData/getParticipantsData.js && node ./progressMailReport/addEmailsToDB.js && node ./progressMailReport/sendMails.js"
   },
   "repository": {
     "type": "git",

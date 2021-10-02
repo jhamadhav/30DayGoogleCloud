@@ -1,6 +1,6 @@
 const dbFunc = require("./../dbFunc.js")
 const mailNode = require("./nodeMailer.js")
-const cred = require("./cred.js")
+const cred = require("./cred")
 let templateMaker = require("./templateMaker.js")
 
 const delay = (time) => {
@@ -10,53 +10,24 @@ const delay = (time) => {
 }
 
 const init = async () => {
+
     let db = dbFunc.read("db.json")
     db = JSON.parse(db)
     db = db["participants"]
-    db = [
-        {
-            "name": "Madhav Jha",
-            "profileLink": "https://www.qwiklabs.com/public_profiles/1d192aa3-51d2-444b-ae36-f54252af7adc",
-            "enrollDate": 1632355200000,
-            "isEnrollStatusGood": true,
-            "email": "jhamd@rknec.edu",
-            "nickname": "Friendly Villain",
-            "badges": [
-                {
-                    "badgeName": "Set Up and Configure a Cloud Environment in Google Cloud",
-                    "badgeID": "1241912",
-                    "badgeDate": 1632960000000
-                },
-                {
-                    "badgeName": "Perform Foundational Infrastructure Tasks in Google Cloud",
-                    "badgeID": "1219675",
-                    "badgeDate": 1632700800000
-                },
-                {
-                    "badgeName": "Create and Manage Cloud Resources",
-                    "badgeID": "1214815",
-                    "badgeDate": 1632614400000
-                }
-            ],
-            "skills": 4,
-            "trackOne": 3,
-            "trackTwo": 1
-        }
-    ]
-    // console.log(db);
 
     let divisor = Math.ceil(db.length / cred.length)
     console.log("\n--Sending mails---\n");
     for (let i = 0; i < db.length; i++) {
 
         if (db[i]["isEnrollStatusGood"] == false) {
-            console.log("For: " + i + 1 + "not enrolled");
+            console.log("For: " + i + "not enrolled");
             continue;
         }
         if (db[i]["email"] == null) {
-            console.log("For: " + i + 1 + "Email not available");
+            console.log("For: " + i + "Email not available");
             continue;
         }
+        console.log(db[i]["email"]);
         await delay(200);
         let credIndex = Math.floor(i / divisor)
         let obj = db[i]

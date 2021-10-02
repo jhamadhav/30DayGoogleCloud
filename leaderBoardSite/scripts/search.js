@@ -8,7 +8,7 @@ inpBar.oninput = () => {
     inp = inp.trim()
     inp = inp.toLowerCase()
 
-    if (inp != "") {
+    if (inp.length > 1) {
 
         for (let i = 0; i < leaderBoardData.length; i++) {
             let obj = leaderBoardData[i].name.toLowerCase()
@@ -18,6 +18,12 @@ inpBar.oninput = () => {
             } else {
                 tbody[i + 1].style.display = "none"
             }
+        }
+    } else {
+        for (let i = 0; i < leaderBoardData.length; i++) {
+
+            tbody[i + 1].style.display = ""
+
         }
     }
 }

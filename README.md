@@ -120,6 +120,44 @@ This will update the leaderBoard automatically 4 times a day.
 
 🥳🎊**Our leaderBoard is ready!!**🎊🥳
 
+## Progress report mail
+
+Hurray! we have are LeaderBoard up and running, but how about we send all the participants a progress report mail, something tailored for each of them with how they are progressing in this 30Day program.
+
+### Step 1: 
+
+To do so, in the folder `./progressMailReport` create file named `cred.js`
+
+### Step 2: 
+
+Since we will be sending mails using `Nodemailer` that will use your email add the following
+```js
+const cred = [
+
+    {
+        "user": "your email",
+        "pass": "password"
+    },
+    {
+        "user": "another email",
+        "pass": "password"
+    }
+
+]
+module.exports = cred
+```
+You can add as many emails as to want, to lower the burden of sending mails as `gmail` has a limit of `100` mails per/day.
+
+### Step 3: 
+Now all that is left is to send mails, run:
+```npm
+npm run sendMailReport
+```
+
+🎉We can now send report mails!!
+
+> This has to be run **manually** since we can't have participants data in public repo.
+
 ## Bugs
 
 If you are experiencing any bugs, don’t forget to open a [new issue](https://github.com/jhamadhav/30DayGoogleCloud/issues/new).

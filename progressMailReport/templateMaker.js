@@ -51,7 +51,7 @@ const getTemplate = (profile) => {
     let BaseTemplate = dbFunc.read(htmlFileLoc)
 
     BaseTemplate = BaseTemplate.replace("{{name}}", profile["name"])
-    BaseTemplate = BaseTemplate.replace("{{nickname}}", profile["nickname"])
+    // BaseTemplate = BaseTemplate.replace("{{nickname}}", profile["nickname"])
 
 
     let track = trackFromDB.trackData;

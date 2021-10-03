@@ -1,7 +1,7 @@
 # #30DayGoogleCloud
 
 <p align="center">
-        <a href="https://events.withgoogle.com/30daysofgooglecloud/#content" target="_blank"><img src="https://user-images.githubusercontent.com/37475140/135711341-d3327a78-968e-4a52-916e-a2a9bed85b10.png" alt=""></a>
+        <a href="https://events.withgoogle.com/30daysofgooglecloud/#content" target="_blank"><img src="https://user-images.githubusercontent.com/37475140/135711341-d3327a78-968e-4a52-916e-a2a9bed85b10.png" alt="banner"></a>
 </p>
 
 ## what is #30DayGoogleCloud ?
@@ -157,6 +157,10 @@ npm run sendMailReport
 🎉We can now send report mails!!
 
 > This has to be run **manually** since we can't have participants data in public repo.
+
+## Sample progress report mail
+
+<p align="center"><img src="./demo/mailSample.gif" alt="mailDemo"></p>
 
 ## Bugs
 

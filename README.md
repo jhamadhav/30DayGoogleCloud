@@ -118,7 +118,7 @@ jobs:
 ```
 This will update the leaderBoard automatically 4 times a day.
 
-🥳🎊**Our leaderBoard is ready!!**🎊🥳
+🥳🎊 **Our leaderBoard is ready!!** 🎊🥳
 
 ## Progress report mail
 

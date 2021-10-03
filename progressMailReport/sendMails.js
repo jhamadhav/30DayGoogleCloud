@@ -27,7 +27,6 @@ const init = async () => {
             console.log("For: " + i + "Email not available");
             continue;
         }
-        console.log(db[i]["email"]);
         await delay(200);
         let credIndex = Math.floor(i / divisor)
         let obj = db[i]

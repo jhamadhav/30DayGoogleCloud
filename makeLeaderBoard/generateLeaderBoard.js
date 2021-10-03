@@ -2,6 +2,10 @@ const fs = require('fs')
 const dbFunc = require("../dbFunc.js")
 const dbFileLoc = "./leaderBoardSite/leaderBoard.js"
 
+const max = (a, b) => {
+    return (a >= b) ? a : b;
+}
+
 const init = () => {
 
     let participants = JSON.parse(dbFunc.read("db.json"))
@@ -34,17 +38,25 @@ const init = () => {
     }
 
     leaderBoard.sort((a, b) => {
-        if (a["skills"] == b["skills"]) {
+        let maxA = max(a["trackOne"], a["trackTwo"])
+        let maxB = max(b["trackOne"], b["trackTwo"])
+        if (a["trackOne"] == b["trackOne"]) {
 
-            if (a["latestSkill"] == b["latestSkill"]) {
-                return 0
-            } else if (a["latestSkill"] < b["latestSkill"]) {
+            if (a["trackTwo"] == b["trackTwo"]) {
+                if (a["latestSkill"] == b["latestSkill"]) {
+                    return 0
+                } else if (a["latestSkill"] < b["latestSkill"]) {
+                    return -1
+                } else {
+                    return 1
+                }
+            } else if (a["trackTwo"] > b["trackTwo"]) {
                 return -1
             } else {
                 return 1
             }
 
-        } else if (a["skills"] > b["skills"]) {
+        } else if (a["trackOne"] > b["trackOne"]) {
             return -1
         } else {
             return 1

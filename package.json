@@ -4,6 +4,7 @@
   "description": "Generate leaderboard and report mails for participants and facilitators.",
   "main": "index.js",
   "scripts": {
+    "setup": "node ./setup.js",
     "1.RefineData": "node ./refineData/filterParticipantsData.js",
     "2.GenerateNicknames": "node ./nicknameGenerator/generateNicknames.js",
     "3.GetData": "node ./scrapeData/getParticipantsData.js",

@@ -19,5 +19,12 @@ const write = (fileName, data) => {
         }
     });
 }
+const writeString = (fileName, data) => {
+    fs.writeFile(fileName, data, (err) => {
+        if (err) {
+            throw err;
+        }
+    });
+}
 
-module.exports = { read, write }
+module.exports = { read, write, writeString }

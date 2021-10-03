@@ -29,7 +29,12 @@ npm install
 To all the facilitator google provides a sheet with participants data, since it contains **private data** such as email. We have not included it to the repo.
 
 1. Convert the `excel sheet` to `json`, you can use [online tools](https://csvjson.com/)
-2. Once you have it ready, create a file in folder : `refineData/rawParticipantsData.json`
+2. Run
+```npm
+npm setup
+```
+once done you will find `refineData\rawParticipantsData.json`, paste the json data there
+
 It should look something like this
 ```text
 [
@@ -126,7 +131,7 @@ Hurray! we have are LeaderBoard up and running, but how about we send all the pa
 
 ### Step 1: 
 
-To do so, in the folder `./progressMailReport` create file named `cred.js`
+To do so, in the folder `./progressMailReport/cred.js`, in `cred.js`add emails and password.
 
 ### Step 2: 
 

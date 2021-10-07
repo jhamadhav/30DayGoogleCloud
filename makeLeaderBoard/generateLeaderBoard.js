@@ -5,6 +5,9 @@ const dbFileLoc = "./leaderBoardSite/leaderBoard.js"
 const max = (a, b) => {
     return (a >= b) ? a : b;
 }
+const min = (a, b) => {
+    return (a <= b) ? a : b;
+}
 
 const init = () => {
 
@@ -40,9 +43,11 @@ const init = () => {
     leaderBoard.sort((a, b) => {
         let maxA = max(a["trackOne"], a["trackTwo"])
         let maxB = max(b["trackOne"], b["trackTwo"])
-        if (a["trackOne"] == b["trackOne"]) {
+        let minA = min(a["trackOne"], a["trackTwo"])
+        let minB = min(b["trackOne"], b["trackTwo"])
+        if (maxA == maxB) {
 
-            if (a["trackTwo"] == b["trackTwo"]) {
+            if (minA == minB) {
                 if (a["latestSkill"] == b["latestSkill"]) {
                     return 0
                 } else if (a["latestSkill"] < b["latestSkill"]) {
@@ -50,13 +55,13 @@ const init = () => {
                 } else {
                     return 1
                 }
-            } else if (a["trackTwo"] > b["trackTwo"]) {
+            } else if (minA > minB) {
                 return -1
             } else {
                 return 1
             }
 
-        } else if (a["trackOne"] > b["trackOne"]) {
+        } else if (maxA > maxB) {
             return -1
         } else {
             return 1

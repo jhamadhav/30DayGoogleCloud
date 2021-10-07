@@ -19,6 +19,11 @@ const addToLeaderBoard = (i, obj) => {
 
 
 const init = async () => {
+    let shadowLoad = document.getElementsByClassName("shadowLoad")
+    for (let i = 0; i < shadowLoad.length; i++) {
+        shadowLoad[i].style.display = "none"
+    }
+
     let time = updateTime
 
     let j = 0;

@@ -27,14 +27,24 @@ const init = async () => {
     let time = updateTime
 
     let j = 0;
+    let bothTrackCompletion = 0, singleTrackCompletion = 0;
     for (let i = 0; i < leaderBoardData.length; i++) {
+        if (leaderBoardData[i].color == "green") {
+            bothTrackCompletion++;
+            singleTrackCompletion++;
+        } else if (leaderBoardData[i].color == "blue") {
+            singleTrackCompletion++;
+        }
 
         addToLeaderBoard(j + 1, leaderBoardData[i])
         j++;
     }
+
     time = time.split(" ")
     time = time[0]
     document.getElementById("timeUpdate").innerText = `Last Updated : ${time}`
+    document.getElementById("bothTrackCompletion").innerText = bothTrackCompletion
+    document.getElementById("singleTrackCompletion").innerText = singleTrackCompletion
 
 }
 
